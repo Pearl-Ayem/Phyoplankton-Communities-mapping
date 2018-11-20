@@ -1,9 +1,10 @@
 %%
 %WARMUP
+function avg =mymean(A)
 
-A=[2,3,4,5,6]
+if isempty(A)
+    avg = 0;
 
-function [avg]=mymean(X)
-
-avg = sum(A)/length(A)
+else
+    avg = nansum(A)/numel(A(~isnan(A)));
 end

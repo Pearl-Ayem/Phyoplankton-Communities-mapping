@@ -1,0 +1,5 @@
+clear
+close all
+clc
+
+[data txt raw] = xlsread('STRATOGEM_plankton.xls');
