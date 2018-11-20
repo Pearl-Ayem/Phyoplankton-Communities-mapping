@@ -31,4 +31,12 @@ index_per_year=[];
 for i = 1:length(plankton_counts)
     index_per_year(i)=shannonWiener(plankton_counts(i,:));
 end
-    
+
+figure
+plot(date,index_per_year);
+title('SW diversity index in the Straight of Georgia over the time');
+xlabel('Date');
+ylabel('SW diversity index');
+datetick;
+
+%% PART 5:  Calculate the SW index and total phytoplankton by year 
