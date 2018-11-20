@@ -26,4 +26,9 @@ ylabel('Pythoplankton Count');
 set(gca, 'yscale', 'log');
 datetick;
 
-%% PART 3
+%% PART 4: Calculate and plot the Shannon-Wiener index for the STRATOGEM data 
+index_per_year=[];
+for i = 1:length(plankton_counts)
+    index_per_year(i)=shannonWiener(plankton_counts(i,:));
+end
+    
