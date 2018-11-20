@@ -2,4 +2,6 @@ clear
 close all
 clc
 
-[data txt raw] = xlsread('STRATOGEM_plankton.xls');
+[num txt raw] = xlsread('STRATOGEM_plankton.xls');
+date = datetime(txt(2:end,1),'ConvertFrom','excel');
+plankton_counts=num(:,2end);
