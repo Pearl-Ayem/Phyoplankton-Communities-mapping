@@ -6,6 +6,8 @@ clc
 date = datetime(txt(2:end,1),'ConvertFrom','excel');
 species_names=txt(1,2:end);
 
+
+%% PART 2
 row_sums=nansum(plankton_counts,2);
 
 figure
@@ -23,3 +25,5 @@ xlabel('Date');
 ylabel('Pythoplankton Count');
 set(gca, 'yscale', 'log');
 datetick;
+
+%% PART 3
