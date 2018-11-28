@@ -39,4 +39,11 @@ xlabel('Date');
 ylabel('SW diversity index');
 datetick;
 
-%% PART 5:  Calculate the SW index and total phytoplankton by year 
+%% PART 5:  Calculate the SW index and total phytoplankton by year
+mask2003= year(date) == 2003;
+sums2003=row_sums(mask2003);
+dates2003=dates(mask_2003);
+
+mask2004= year(date) == 2004;
+sums2004=row_sums(mask2004);
+dates2004=dates(mask_2004);
