@@ -33,7 +33,7 @@ for i = 1:length(plankton_counts)
 end
 
 figure
-plot(date,index_per_year,'linewidth', 1);
+plot(date,index_per_year);
 title('SW diversity index in the Straight of Georgia over the time');
 xlabel('Date');
 ylabel('SW diversity index');
@@ -46,32 +46,17 @@ sw2003=index_per_year(year(date) == 2003);
 
 figure
 subplot(211)
-plot(dates2003,pcounts2003, 'linewidth', 1);
-title('2003 phytoplankton count', 'linewidth', 1);
+plot(dates2003,pcounts2003);
+title('2003 phytoplankton count and SW index');
 xlabel('Date');
 ylabel('Phytoplankton Count');
 
 subplot(212)
-plot(dates2003,sw2003, 'linewidth', 1);
-title('2003 SW index');
-xlabel('Date');
-ylabel('SW index');
+
+
 
 
 
 pcounts2004=row_sums(year(date) == 2004);
 dates2004=date(year(date) == 2004);
 sw2004=index_per_year(year(date) == 2004);
-
-figure
-subplot(211)
-plot(dates2004,pcounts2004, 'linewidth', 1);
-title('2004 phytoplankton count');
-xlabel('Date');
-ylabel('Phytoplankton Count');
-
-subplot(212)
-plot(dates2004,sw2004, 'linewidth', 1);
-title('2004 SW index');
-xlabel('Date');
-ylabel('SW index');
